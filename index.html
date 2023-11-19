@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #222;
+        }
+
+        .main-box {
+            margin: 0 auto;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 3px;
+            background: #ff7a00;
+            color: #fff;
+            border: 0;
+            font-size: 14px;
+            cursor: pointer;
+            height: 40px;
+            align-self: center;
+        }
+
+        img {
+            width: 180px;
+            margin: 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <button class="btn" onclick="onBulb()">Click to turn "ON" the Light</button>
+        <img id="image" src="bulb-off.png" alt="">
+        <button class="btn" onclick="offBulb()">Click to turn "OFF" the
+            Light</button>
+    </div>
+
+    <script>
+        const bulb = document.getElementById('image');
+
+        function onBulb() {
+            bulb.src = 'bulb-on.png';
+            bulb.style.filter = "drop-shadow(0px 0px 19px rgba(0,0,0,12%))";
+            document.body.style.backgroundColor = "#fdf623";
+        }
+
+        function offBulb(){
+            bulb.src = 'bulb-off.png';
+            bulb.style.filter = "drop-shadow(0px 0px 19px rgba(0,0,0,12%))";
+            document.body.style.backgroundColor = "#222";
+        }
+    </script>
+</body>
+
+</html>
